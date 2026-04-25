@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../../ui/Card/Card";
+import Card from "./Card";
 import * as Icons from "lucide-react";
 
 const ServiceCard = ({ service, onClick }) => {
