@@ -1,8 +1,8 @@
 import React from "react";
 import { ShieldCheck, MapPin, Briefcase } from "lucide-react";
-import Card from "../../ui/Card/Card";
-import StarRating from "../StarRating/StarRating";
-import Button from "../../ui/Button/Button";
+import Card from "./Card";
+import StarRating from "./StarRating";
+import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 
 const ProviderCard = ({ provider }) => {
