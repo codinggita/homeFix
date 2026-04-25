@@ -1,17 +1,23 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Sun, Moon, MapPin, User, LogOut } from "lucide-react";
-// import useTheme from "../../../hooks/useTheme";
-// import useAuth from "../../../hooks/useAuth";
-import Button from "./components/Button";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleTheme } from "../features/uiSlice";
+import { logout } from "../features/authSlice";
+import Button from "./Button";
 
 const Navbar = () => {
-  const { theme, toggleTheme } = useTheme();
-  const { isAuthenticated, logout, user } = useAuth();
+  const dispatch = useDispatch();
+  const theme = useSelector((state) => state.ui.theme);
+  const { isAuthenticated, user } = useSelector((state) => state.auth);
   const navigate = useNavigate();
 
+  const handleToggleTheme = () => {
+    dispatch(toggleTheme());
+  };
+
   const handleLogout = () => {
-    logout();
+    dispatch(logout());
     navigate("/login");
   };
 
@@ -37,7 +43,7 @@ const Navbar = () => {
 
           <div className="flex items-center gap-4">
             <button
-              onClick={toggleTheme}
+              onClick={handleToggleTheme}
               className="p-2 rounded-full text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 transition-colors focus:outline-none"
             >
               {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
