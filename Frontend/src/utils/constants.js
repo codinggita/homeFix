@@ -105,11 +105,11 @@ export const PROVIDERS = [
     rating: 4.6,
     reviews: 89,
     experience: 5,
-    onTimePercent: 90,
+    onTimePercent: 92,
     isVerified: true,
     priceMenu: [
-      { name: "Tap Leakage", price: 249 },
-      { name: "Pipe Blockage", price: 499 },
+      { name: "Tap Repair", price: 199 },
+      { name: "Pipe Leakage Fix", price: 349 },
     ],
   },
   {
@@ -135,11 +135,11 @@ export const PROVIDERS = [
     rating: 4.5,
     reviews: 65,
     experience: 6,
-    onTimePercent: 88,
+    onTimePercent: 90,
     isVerified: true,
     priceMenu: [
-      { name: "1 BHK Painting", price: 5000 },
-      { name: "2 BHK Painting", price: 8000 },
+      { name: "1 Room Painting", price: 2999 },
+      { name: "Wall Touchup", price: 999 },
     ],
   },
   {
@@ -150,11 +150,11 @@ export const PROVIDERS = [
     rating: 4.7,
     reviews: 150,
     experience: 4,
-    onTimePercent: 92,
+    onTimePercent: 96,
     isVerified: true,
     priceMenu: [
       { name: "Bathroom Deep Clean", price: 499 },
-      { name: "Full Home Clean", price: 1499 },
+      { name: "Kitchen Deep Clean", price: 899 },
     ],
   },
   {
@@ -165,11 +165,11 @@ export const PROVIDERS = [
     rating: 4.4,
     reviews: 45,
     experience: 3,
-    onTimePercent: 85,
-    isVerified: false,
+    onTimePercent: 88,
+    isVerified: true,
     priceMenu: [
-      { name: "Washing Machine Repair", price: 349 },
-      { name: "Refrigerator Repair", price: 499 },
+      { name: "Washing Machine Repair", price: 499 },
+      { name: "Refrigerator Repair", price: 599 },
     ],
   },
   {
@@ -183,8 +183,8 @@ export const PROVIDERS = [
     onTimePercent: 96,
     isVerified: true,
     priceMenu: [
-      { name: "Furniture Assembly", price: 499 },
-      { name: "Door Repair", price: 399 },
+      { name: "Door Repair", price: 499 },
+      { name: "Furniture Assembly", price: 899 },
     ],
   },
   {
@@ -195,11 +195,11 @@ export const PROVIDERS = [
     rating: 4.6,
     reviews: 78,
     experience: 7,
-    onTimePercent: 91,
+    onTimePercent: 94,
     isVerified: true,
     priceMenu: [
-      { name: "Washbasin Fixing", price: 399 },
-      { name: "Toilet Repair", price: 599 },
+      { name: "Shower Replacement", price: 299 },
+      { name: "Drain Unclogging", price: 399 },
     ],
   },
   {
@@ -210,11 +210,11 @@ export const PROVIDERS = [
     rating: 4.9,
     reviews: 300,
     experience: 15,
-    onTimePercent: 99,
+    onTimePercent: 97,
     isVerified: true,
     priceMenu: [
-      { name: "Wiring Check", price: 599 },
-      { name: "Inverter Installation", price: 999 },
+      { name: "Full Home Checkup", price: 499 },
+      { name: "MCB Replacement", price: 299 },
     ],
   },
   {
@@ -225,11 +225,11 @@ export const PROVIDERS = [
     rating: 4.5,
     reviews: 134,
     experience: 6,
-    onTimePercent: 89,
+    onTimePercent: 91,
     isVerified: true,
     priceMenu: [
-      { name: "Tank Cleaning", price: 699 },
-      { name: "Motor Repair", price: 499 },
+      { name: "Washbasin Repair", price: 249 },
+      { name: "Toilet Fixing", price: 449 },
     ],
   },
 ];
