@@ -42,12 +42,12 @@ const Modal = ({
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title"
-        className={`relative bg-surface dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-md transform transition-all flex flex-col ${className}`}
+        className={`relative bg-white rounded-[24px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] w-full max-w-md transform transition-all flex flex-col animate-scaleIn ${className}`}
       >
-        <div className="flex items-center justify-between p-4 border-b dark:border-gray-700">
+        <div className="flex items-center justify-between p-4 border-b">
           <h3
             id="modal-title"
-            className="text-lg font-semibold text-gray-900 dark:text-white"
+            className="text-lg font-semibold text-gray-900"
           >
             {title}
           </h3>
@@ -63,7 +63,7 @@ const Modal = ({
         <div className="p-4 overflow-y-auto max-h-[70vh]">{children}</div>
 
         {footer && (
-          <div className="border-t dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-b-lg">
+          <div className="border-t p-4 bg-gray-50 rounded-b-lg">
             {footer}
           </div>
         )}
