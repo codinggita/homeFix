@@ -18,7 +18,7 @@ const StarRating = ({
             className={`relative ${interactive ? "cursor-pointer" : ""}`}
             onClick={() => interactive && onChange && onChange(i + 1)}
           >
-            <Star size={size} className="text-gray-300 dark:text-gray-600" />
+            <Star size={size} className="text-gray-300" />
             <div
               className="absolute top-0 left-0 overflow-hidden"
               style={{ width: `${fillPercent}%` }}
