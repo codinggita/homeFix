@@ -1,11 +1,11 @@
 import React from "react";
 
 const Skeleton = ({ className = "", variant = "text" }) => {
-  const baseClasses = "animate-pulse bg-gray-200 dark:bg-gray-700";
+  const baseClasses = "animate-pulse bg-gray-200";
 
   const variants = {
     text: "rounded",
-    card: "rounded-xl",
+    card: "rounded-[24px]",
     avatar: "rounded-full",
   };
 

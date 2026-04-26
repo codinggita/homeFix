@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-hot-toast";
-import { clearToast } from "../../../features/ui/uiSlice";
+import { clearToast } from "../store/slice/uiSlice";
 
 const GlobalToast = () => {
   const { toastMessage } = useSelector((state) => state.ui);
