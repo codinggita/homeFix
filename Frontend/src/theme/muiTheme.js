@@ -1,10 +1,10 @@
 import { createTheme } from "@mui/material/styles";
 import { colors } from "./colors";
 
-export const getMuiTheme = (mode) =>
+export const getMuiTheme = () =>
   createTheme({
     palette: {
-      mode,
+      mode: "light",
       primary: {
         main: colors.primary,
         dark: colors.primaryDark,
@@ -20,14 +20,14 @@ export const getMuiTheme = (mode) =>
         main: colors.danger,
       },
       background: {
-        default: mode === "light" ? colors.background : "#121212",
-        paper: mode === "light" ? colors.surface : "#1E1E1E",
+        default: colors.background,
+        paper: colors.surface,
       },
       text: {
-        primary: mode === "light" ? colors.text.primary : "#F9FAFB",
-        secondary: mode === "light" ? colors.text.secondary : "#9CA3AF",
+        primary: colors.text.primary,
+        secondary: colors.text.secondary,
       },
-      divider: mode === "light" ? colors.border : "#374151",
+      divider: colors.border,
     },
     typography: {
       fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
