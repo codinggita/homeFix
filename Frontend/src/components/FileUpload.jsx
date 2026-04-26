@@ -5,7 +5,7 @@ import {
   File as FileIcon,
   Image as ImageIcon,
 } from "lucide-react";
-import useFileUpload from "../../../hooks/useFileUpload";
+import useFileUpload from "../hooks/useFileUpload";
 
 const FileUpload = ({
   label,
@@ -72,7 +72,7 @@ const FileUpload = ({
           className={`border-2 border-dashed rounded-lg p-6 text-center cursor-pointer transition-colors ${
             isDragging
               ? "border-primary bg-primary/5"
-              : "border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800"
+              : "border-gray-300 hover:bg-gray-50"
           }`}
         >
           <input
@@ -94,7 +94,7 @@ const FileUpload = ({
           </p>
         </div>
       ) : (
-        <div className="border rounded-lg p-4 bg-surface dark:bg-gray-800 border-border dark:border-gray-700 relative">
+        <div className="border rounded-xl p-4 bg-white border-gray-200 relative">
           <button
             onClick={() => {
               reset();
