@@ -7,13 +7,13 @@ const ServicesGrid = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-20 bg-background dark:bg-gray-900">
+    <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Our Services
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-500 max-w-2xl mx-auto">
             From quick repairs to complete renovations, our professionals are
             equipped to handle any job.
           </p>
