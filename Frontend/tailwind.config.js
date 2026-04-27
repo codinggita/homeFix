@@ -5,9 +5,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#1A6BFF",
-        background: "#F8F9FC",
-        surface: "#FFFFFF",
+        primary: "#2563eb",
+        background: "#ffffff",
+        surface: "#ffffff",
         muted: "#6B7280",
         success: "#0F9E6B",
         warning: "#F59E0B",
