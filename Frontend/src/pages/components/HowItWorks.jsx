@@ -33,20 +33,20 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-20 bg-background dark:bg-gray-900">
+    <section className="py-20 bg-[#fafafa]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
             How It Works
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-500 max-w-2xl mx-auto">
             Booking a service with HomeFix is simple, fast, and secure.
           </p>
         </div>
 
         <div className="relative">
           {/* Connector Line */}
-          <div className="hidden md:block absolute top-1/4 left-[10%] right-[10%] h-0.5 bg-gray-200 dark:bg-gray-700 -z-10" />
+          <div className="hidden md:block absolute top-1/4 left-[10%] right-[10%] h-0.5 bg-gray-200 -z-10" />
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {steps.map((step) => {
@@ -56,16 +56,16 @@ const HowItWorks = () => {
                   key={step.id}
                   className="relative flex flex-col items-center text-center"
                 >
-                  <div className="w-16 h-16 rounded-full bg-white dark:bg-gray-800 border-4 border-gray-100 dark:border-gray-900 shadow-md flex items-center justify-center text-primary mb-6 relative z-10">
+                  <div className="w-16 h-16 rounded-full bg-white border-4 border-gray-100 shadow-md flex items-center justify-center text-primary mb-6 relative z-10">
                     <Icon size={24} />
-                    <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center border-2 border-white dark:border-gray-800">
+                    <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center border-2 border-white">
                       {step.id}
                     </div>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm max-w-[200px]">
+                  <p className="text-gray-500 text-sm max-w-[200px]">
                     {step.description}
                   </p>
                 </div>
