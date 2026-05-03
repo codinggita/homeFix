@@ -104,148 +104,34 @@ The Figma design is the **mandatory first step** before any development. All scr
 ## 4. Folder Structure
 
 ```
-homefix/
-├── public/
-│   ├── favicon.ico
-│   ├── robots.txt
-│   └── sitemap.xml
+homeFix/
+├── Backend/
+│   ├── src/                     # Backend source code
+│   │   ├── controllers/         # Request handlers
+│   │   ├── models/              # Mongoose schemas
+│   │   ├── routes/              # API routes
+│   │   ├── middleware/          # Custom middlewares
+│   │   └── index.js             # Entry point
+│   ├── package.json
+│   └── .env                     # Environment variables
 │
-├── src/
-│   ├── assets/                    # Static assets
-│   │   ├── images/
-│   │   ├── icons/
-│   │   └── fonts/
-│   │
-│   ├── components/                # Reusable UI components
-│   │   ├── ui/
-│   │   │   ├── Button/
-│   │   │   │   ├── Button.jsx
-│   │   │   │   └── Button.test.jsx
-│   │   │   ├── Input/
-│   │   │   ├── Modal/
-│   │   │   ├── Card/
-│   │   │   ├── Badge/
-│   │   │   ├── Table/
-│   │   │   ├── Skeleton/
-│   │   │   ├── Toast/
-│   │   │   └── FileUpload/
-│   │   │
-│   │   ├── layout/
-│   │   │   ├── Navbar/
-│   │   │   ├── Sidebar/
-│   │   │   ├── Footer/
-│   │   │   └── PageWrapper/
-│   │   │
-│   │   └── shared/
-│   │       ├── ProviderCard/
-│   │       ├── ServiceCard/
-│   │       ├── BookingCard/
-│   │       ├── ReviewCard/
-│   │       ├── StarRating/
-│   │       └── EmptyState/
-│   │
-│   ├── pages/                     # Route-level page components
-│   │   ├── Home/
-│   │   │   ├── HomePage.jsx
-│   │   │   └── components/
-│   │   │       ├── HeroSection.jsx
-│   │   │       ├── ServicesGrid.jsx
-│   │   │       ├── TopProviders.jsx
-│   │   │       └── HowItWorks.jsx
-│   │   │
-│   │   ├── Auth/
-│   │   │   ├── LoginPage.jsx
-│   │   │   └── SignUpPage.jsx
-│   │   │
-│   │   ├── Services/
-│   │   │   ├── ServicesPage.jsx
-│   │   │   └── ServiceDetailPage.jsx
-│   │   │
-│   │   ├── Provider/
-│   │   │   └── ProviderProfilePage.jsx
-│   │   │
-│   │   ├── Booking/
-│   │   │   ├── BookingPage.jsx
-│   │   │   └── steps/
-│   │   │       ├── StepSchedule.jsx
-│   │   │       ├── StepAddress.jsx
-│   │   │       └── StepPayment.jsx
-│   │   │
-│   │   ├── Dashboard/
-│   │   │   ├── DashboardPage.jsx
-│   │   │   └── components/
-│   │   │       ├── BookingsList.jsx
-│   │   │       ├── MetricCards.jsx
-│   │   │       └── QuickBook.jsx
-│   │   │
-│   │   ├── Profile/
-│   │   │   └── UserProfilePage.jsx
-│   │   │
-│   │   ├── Admin/
-│   │   │   ├── AdminDashboard.jsx
-│   │   │   ├── ManageProviders.jsx
-│   │   │   └── ManageBookings.jsx
-│   │   │
-│   │   └── NotFound/
-│   │       └── NotFoundPage.jsx
-│   │
-│   ├── features/                  # Redux Toolkit slices (feature-based)
-│   │   ├── auth/
-│   │   │   ├── authSlice.js
-│   │   │   └── authSelectors.js
-│   │   ├── user/
-│   │   │   ├── userSlice.js
-│   │   │   └── userSelectors.js
-│   │   ├── booking/
-│   │   │   ├── bookingSlice.js
-│   │   │   └── bookingSelectors.js
-│   │   ├── services/
-│   │   │   └── servicesSlice.js
-│   │   └── ui/
-│   │       └── uiSlice.js         # loader, theme, toast state
-│   │
-│   ├── hooks/                     # Custom React hooks
-│   │   ├── useAuth.js
-│   │   ├── useDebounce.js
-│   │   ├── useFetch.js
-│   │   ├── useTheme.js
-│   │   ├── useLocalStorage.js
-│   │   └── useFileUpload.js
-│   │
-│   ├── services/                  # API layer
-│   │   ├── api.js                 # Axios instance + interceptors
-│   │   ├── authService.js
-│   │   ├── bookingService.js
-│   │   ├── providerService.js
-│   │   └── uploadService.js
-│   │
-│   ├── store/                     # Redux store config
-│   │   └── store.js
-│   │
-│   ├── utils/                     # Helper functions
-│   │   ├── storage.js             # localStorage/sessionStorage helpers
-│   │   ├── formatters.js          # Date, currency, string formatters
-│   │   ├── validators.js          # Common validation helpers
-│   │   └── constants.js           # App-wide constants
-│   │
-│   ├── routes/                    # Routing config
-│   │   ├── AppRoutes.jsx
-│   │   ├── ProtectedRoute.jsx
-│   │   └── RoleRoute.jsx
-│   │
-│   ├── theme/                     # MUI + Tailwind theme
-│   │   ├── muiTheme.js
-│   │   └── colors.js
-│   │
-│   ├── App.jsx
-│   └── main.jsx
+├── Frontend/
+│   ├── public/                  # Static assets
+│   ├── src/                     # Frontend source code
+│   │   ├── assets/              # Images, fonts, etc.
+│   │   ├── components/          # Reusable UI components
+│   │   ├── pages/               # Route-level page components
+│   │   ├── features/            # Redux Toolkit slices
+│   │   ├── hooks/               # Custom React hooks
+│   │   ├── services/            # API layer (Axios)
+│   │   ├── store/               # Redux store config
+│   │   ├── utils/               # Helper functions
+│   │   ├── App.jsx              # Main App component
+│   │   └── main.jsx             # Entry point
+│   ├── package.json
+│   ├── tailwind.config.js       # Tailwind configuration
+│   └── vite.config.js           # Vite configuration
 │
-├── .eslintrc.cjs
-├── .prettierrc
-├── index.html
-├── tailwind.config.js
-├── vite.config.js
-├── package.json
 └── README.md
 ```
 
@@ -386,17 +272,16 @@ homefix/
 | Code Quality | **ESLint + Prettier** | Linting and code formatting |
 | Icons | **Lucide React** | Consistent icon set |
 
-### Backend (Planned)
+### Backend
 
 | Category | Technology |
 |---|---|
 | Runtime | Node.js |
 | Framework | Express.js |
 | Database | MongoDB (Mongoose) |
-| Auth | JWT + bcrypt |
+| Auth | JWT + bcryptjs |
 | File Storage | Cloudinary |
-| Real-time | Socket.io |
-| Email/OTP | Nodemailer / Twilio |
+| Email | Nodemailer |
 
 ### Design
 
@@ -418,10 +303,30 @@ homefix/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/homefix.git
+git clone https://github.com/nikhilraj-13/homeFix.git
 
 # Navigate into the project
-cd homefix
+cd homeFix
+```
+
+#### Backend Setup
+
+```bash
+# Navigate to Backend folder
+cd Backend
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+#### Frontend Setup
+
+```bash
+# Navigate to Frontend folder (from project root)
+cd Frontend
 
 # Install dependencies
 npm install
@@ -432,22 +337,23 @@ npm run dev
 
 ### Environment Variables
 
-Create a `.env` file in the root:
+Create `.env` files in both the `Backend` and `Frontend` directories:
+
+#### Backend `.env`
+
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+CLOUDINARY_CLOUD_NAME=your_cloudinary_name
+CLOUDINARY_API_KEY=your_cloudinary_key
+CLOUDINARY_API_SECRET=your_cloudinary_secret
+```
+
+#### Frontend `.env`
 
 ```env
 VITE_API_BASE_URL=http://localhost:5000/api
-VITE_GOOGLE_CLIENT_ID=your_google_client_id
-VITE_GA_MEASUREMENT_ID=your_ga4_id
-```
-
-### Available Scripts
-
-```bash
-npm run dev        # Start development server
-npm run build      # Build for production
-npm run preview    # Preview production build
-npm run lint       # Run ESLint
-npm run format     # Run Prettier
 ```
 
 ---
